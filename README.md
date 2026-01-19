@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 MarketFinder
 
-## Getting Started
+MarketFinder is a modern web platform designed to help users discover products available in **local city markets** without physically visiting multiple shops.  
+It connects **customers**, **local shop owners**, and **administrators** in one seamless digital marketplace.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Problem Statement
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Local markets have great products, but:
+- Customers must visit multiple shops to find what they need
+- Shop owners lack digital visibility
+- There is no centralized system for local product discovery
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**MarketFinder solves this by bringing local markets online.**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎯 Key Features
 
-To learn more about Next.js, take a look at the following resources:
+### 👤 Customers
+- Select city and local market
+- Search products available in nearby shops
+- Filter by price, size, color, and availability
+- View product and shop details
+- Add items to cart / send inquiries
+- Manage personal profile
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🏪 Shop Owners
+- Register and manage shop profile
+- Add, edit, and manage products
+- Track product availability and stock
+- View customer inquiries and orders
+- Dashboard with insights (views, products, orders)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🛠️ Admin
+- Analytics dashboard
+- City and market management
+- Shop approval and moderation
+- User and shop management
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧱 Pages Overview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🌐 Public Pages
+- Landing Page
+- Login & Signup
+- OTP / Email Verification
+
+### 🧑‍💼 Customer Experience
+- City & Market Selection
+- Product Search & Filters
+- Product Details
+- Cart / Inquiry
+- Profile Management
+
+### 🏬 Shop Owner Dashboard
+- Overview Dashboard
+- Product Management
+- Orders & Inquiries
+- Shop Profile Settings
+
+### 👨‍💻 Admin Dashboard
+- Analytics Overview
+- Market Management
+- Shop Approval
+- User Management
+
+---
+
+## 🎨 UI & Design Philosophy
+
+- Clean, modern, and professional
+- Mobile-first responsive design
+- Local-market friendly feel
+- Soft shadows & rounded cards
+- Neutral color palette with a single primary accent color
+- Clear icons and readable typography
+- Includes:
+  - Loading states
+  - Empty states
+  - Success & error messages
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **State Management:** React Hooks / Context API
+- **Data:** Mock (Dummy) data (Backend ready for future integration)
+
+---
+
+## 📁 Project Structure (Simplified)
+
+- market-finder/
+- ├── app/
+- │ ├── (auth)/
+- │ ├── (customer)/
+- │ ├── (shop-owner)/
+- │ ├── (admin)/
+- │ └── layout.tsx
+- ├── components/
+- ├── data/
+- ├── types/
+- ├── lib/
+- ├── public/
+- └── README.md
+
+
+---
+
+## 🧪 Current Status
+
+- ✅ UI completed
+- ✅ Fully responsive
+- ✅ Interactive components
+- 🚧 Backend integration (planned)
+- 🚧 Authentication logic (planned)
+
+---
+
+## 📌 Future Improvements
+
+- Backend integration (API + Database)
+- Real-time stock updates
+- Payment gateway integration
+- Location-based search
+- Push notifications
+
+---
+
+## 🤝 Contribution
+
+Contributions, suggestions, and improvements are welcome!  
+Feel free to fork the repository and submit pull requests.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+## 🌟 Author
+
+Developed as a real-world, startup-ready project to showcase modern full-stack UI design and architecture.
