@@ -32,21 +32,21 @@ export function Header({ onCartClick }: HeaderProps) {
           <Link href="#how-it-works" className="text-foreground hover:text-primary text-sm font-medium">
             How it Works
           </Link>
-          <Link href="#sellers" className="text-foreground hover:text-primary text-sm font-medium">
-            For Businesses
-          </Link>
           <a href="#" className="text-foreground hover:text-primary text-sm font-medium">
-            Login
+            Support
           </a>
+          <Link href="#" className="text-foreground hover:text-primary text-sm font-medium">
+            Contact Us
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">
-          <button className="text-foreground hover:text-primary text-sm font-medium hidden md:block">
-            Register Your Shop
-          </button>
+          <Link href="/auth" className="hidden md:inline-block px-6 py-2 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary/90 transition">
+            Contact Us
+          </Link>
           <button
             onClick={onCartClick}
-            className="relative p-1 hover:bg-muted rounded transition"
+            className="relative p-1 hover:bg-muted rounded transition md:block hidden"
           >
             <ShoppingCart className="w-6 h-6 text-foreground hover:text-primary" />
             {cartCount > 0 && (
