@@ -10,15 +10,17 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export function Hero() {
+  const router = useRouter();
   const [city, setCity] = useState('');
   const [market, setMarket] = useState('');
   const [search, setSearch] = useState('');
 
   const handleSearch = () => {
-    // Cart functionality handled elsewhere
-    console.log('Searching for:', { city, market, search });
+    const query = search || 'products';
+    router.push(`/search?q=${encodeURIComponent(query)}`);
   };
 
   return (

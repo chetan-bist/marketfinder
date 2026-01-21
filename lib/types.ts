@@ -6,6 +6,10 @@ export interface Product {
   market: string;
   category: string;
   availability: string;
+  shop: string;
+  badge?: 'IN STOCK' | 'MARKET FAVORITE';
+  sizes?: string[];
+  colors?: string[];
 }
 
 export interface CartItem {
