@@ -6,11 +6,13 @@ import Link from 'next/link';
 
 interface HeaderProps {
   onCartClick?: () => void;
+  onInquiryClick?: () => void;
 }
 
-export function Header({ onCartClick }: HeaderProps) {
-  const { getTotalItems } = useCart();
+export function Header({ onCartClick, onInquiryClick }: HeaderProps) {
+  const { getTotalItems, getTotalInquiryItems } = useCart();
   const cartCount = getTotalItems();
+  const inquiryCount = getTotalInquiryItems();
 
   return (
     <header className="bg-white border-b border-border sticky top-0 z-30">
@@ -45,10 +47,25 @@ export function Header({ onCartClick }: HeaderProps) {
             Contact Us
           </Link>
           <button
-            onClick={onCartClick}
-            className="relative p-1 hover:bg-muted rounded transition md:block hidden"
+            onClick={onInquiryClick}
+            className="relative p-1 hover:bg-muted rounded transition md:block hidden group"
+            title="Inquiry List"
           >
-            <ShoppingCart className="w-6 h-6 text-foreground hover:text-primary" />
+            <svg className="w-6 h-6 text-foreground group-hover:text-primary transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            {inquiryCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                {inquiryCount}
+              </span>
+            )}
+          </button>
+          <button
+            onClick={onCartClick}
+            className="relative p-1 hover:bg-muted rounded transition md:block hidden group"
+            title="Shopping Cart"
+          >
+            <ShoppingCart className="w-6 h-6 text-foreground group-hover:text-primary transition" />
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                 {cartCount}
