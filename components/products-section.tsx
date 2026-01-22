@@ -20,6 +20,7 @@ export function ProductsSection() {
       market: 'Central Farmers Market',
       category: 'Produce',
       availability: 'In Stock',
+      shop: 'Central Farmers Market'
     },
     {
       id: '2',
@@ -29,6 +30,7 @@ export function ProductsSection() {
       market: 'Community Market',
       category: 'Bakery',
       availability: 'In Stock',
+      shop: 'Community Market'
     },
     {
       id: '3',
@@ -38,6 +40,7 @@ export function ProductsSection() {
       market: 'Riverside Market',
       category: 'Specialty',
       availability: 'In Stock',
+      shop: 'Riverside Market'
     },
     {
       id: '4',
@@ -47,6 +50,7 @@ export function ProductsSection() {
       market: 'Central Farmers Market',
       category: 'Produce',
       availability: 'In Stock',
+      shop: 'Central Farmers Market'
     },
     {
       id: '5',
@@ -56,6 +60,7 @@ export function ProductsSection() {
       market: 'Artisan Market',
       category: 'Dairy',
       availability: 'In Stock',
+      shop: 'Artisan Market'
     },
     {
       id: '6',
@@ -65,6 +70,7 @@ export function ProductsSection() {
       market: 'Corner Market',
       category: 'Flowers',
       availability: 'In Stock',
+      shop: 'Corner Market'
     },
   ];
 
